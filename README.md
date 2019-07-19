@@ -4,7 +4,7 @@
 
 This is the code repository for our algorithm that ranked No.1 on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). 
 
-We are preparing for code releases and a detailed technical reports. We hope our efforts will act as stepping stone to better recognition algorithms.
+We are preparing for code releases and a detailed technical report. We hope our efforts will act as stepping stone to better recognition algorithms.
 
 ### Team
 - Shangbang Long (龙上邦), master student at CMU MLD
