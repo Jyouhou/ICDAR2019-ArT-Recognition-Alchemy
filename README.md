@@ -7,10 +7,10 @@ This is the code repository for our algorithm that ranked No.1 on [__ICDAR2019 R
 We are preparing for code releases and a detailed technical report. We hope our efforts will act as a stepping stone to better recognition algorithms.
 
 ### Team
-- Shangbang Long (龙上邦), master student at CMU MLD
-- Yushuo Guan (关玉烁), master student at PKU EECS
-- Bingxuan Wang (王炳宣), junior undergraduate student at PKU Yuanpei College
-- Kaigui Bian (边凯归), associate professor a PKU EECS
+- Shangbang Long (龙上邦), master student at CMU MLD.
+- Yushuo Guan (关玉烁), master student at Peking University, EECS.
+- Bingxuan Wang (王炳宣), junior undergraduate student at Peking University, Yuanpei College.
+- Kaigui Bian (边凯归), associate professor at Peking University, EECS.
 - Cong Yao (姚聪), algorithm team leader at MEGVII (Face++) Inc.
 
 
