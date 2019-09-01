@@ -1,10 +1,12 @@
-# ICDAR2019-ArT-Recognition-Champion-Code
+# ICDAR2019-ArT-Recognition-Code for PKU Team Zero
 
 ## Introduction
 
-This is the code repository for our algorithm that ranked No.1 on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). 
+This is the code repository for our algorithm that **ranked No.1** on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). Our team name is PKU Team Zero. 
 
 We have submitted a detailed technical report to Arxiv that should be announced at Mon, 2 Sep 2019 00:00:00 GMT. Code will be released by then. Get ready :) We hope our efforts will act as a stepping stone to better recognition algorithms.
+
+![](imgs/pipeline.pdf)
 
 ### Team
 - Shangbang Long (龙上邦), master student at CMU MLD.
@@ -24,3 +26,119 @@ For full List, [click here](https://rrc.cvc.uab.es/?ch=14&com=evaluation&task=2)
 | CUTeOCR | 73.91% | 35284 | 26078 |
 | CRAFT (Preprocessing) + TPS-ResNet | 73.87% | 35284 | 26063 |
 | serial_rec | 72.89% | 35284 | 25717 |
+
+## Experiment Replication
+
+### Environment
+Find the enclosed environment file, and use the following command to install: 
+
+`conda env create -f environment.yml`
+
+You will need Anaconda to do so. 
+
+### Data
+In this section, we introduce how to prepare data for experiments. For our datasets, please refer to the `Pretrained Models and Data` section below.
+
+All datasets should be placed under the `dataset` folder. The datasets should be arranged as follows:
+
+#### - File Tree
+
+```
+|-dataset
+|    |-dataset_name
+|         | Label.json
+|         |-IMG
+|                1. jpg
+|                2. jpg
+|                ...
+
+```
+
+#### - Label.json File
+The Structure of `Label.json` should be:
+
+```
+[
+    {
+        "img": "IMG/x.jpg",
+        "word": str,
+        "poly_x": [int, int, int, ...], 
+        "poly_y": [int, int, int, ...],
+        "chars": list(list(list(int)))
+    }
+]
+```
+
+The attributes are:
+
+- `img`: path of the image file
+- `str`: text content of the image
+- `poly_x`: x coordinates of the bounding polygon, if exists.
+- `poly_y`: y coordinates of the bounding polygon, if exists.
+- `chars`: a 3-D  2x4xN array (list) representing bounding boxes of N characters. The 3 dimensions are: x/y coordinates, 4 corners, N characters.
+
+
+
+### How to Replicate the Experiments Presented in Our Paper:
+After the paper is announce, you can refer to the paper for more details. To run experiments, find the training scripts under the corresponding folders, and **call from the root folder**, e.g. `bash Experiment/Experiment1/Exper_1_CRNN_all_synth.sh`.
+
+#### Exp 1: 
+Experiments W.R.T. new synthetic datasets as described in Section 3.1.2-3.1.3 can be found in `Experiment/Experiment1`. 
+
+#### Exp 2:
+Experiments W.R.T. mixing synthetic datasets and real world data as described in Section 3.2 can be found in `Experiment/Experiment2`. 
+
+#### Exp 3&4:
+Experiments with model modifications as described in Section 4 can be found in `Experiment/Experiment3` and `Experiment/Experiment4`. 
+
+#### ICDAR 2019-ArT:
+To replicate our ICDAR 2019 models, readers can use scripts in `Experiment/Experiment6`. 
+
+
+## Pretrained Models and Data
+
+### Models
+We will release some pretrained models shortly.
+
+### Data
+We will release all datasets we used for the convenience of the research community. 
+
+However, as they are large, we only release the following ones for now. We will update soon. 
+
+| Dataset name | Description | Link |
+|:----:|:----:|:----:|
+| *RectTotal* | Total-Text rectified by TextSnake | [Google Drive](https://drive.google.com/open?id=1PYMAJA6zAvmjMpiPO5FXMmaj-vPVjQkC) | 
+| *CurvedSynth*(20K) | The newly proposed synthetic dataset we used | [Google Drive](https://drive.google.com/open?id=1J3Wd_KYIZdsX262ybuSJL_gWrCQoeel9) |
+
+You can download and put these one under the `dataset` folder to start trying our code.
+
+
+### Curved SynthText Engine
+
+![](imgs/curved.pdf)
+
+As would be discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine: [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
+
+Using synthetic images from this engine, we can expect $10+\%$ improvement on Total-Text using a very simple algorithm. 
+
+### RectTotal
+![](imgs/RectTot.jpeg)
+
+We propose to evaluate algorithms on images rectified by TextSnake, as an investigation of key factors in text recognition. The TextSnake paper refers to the following one: 
+
+```
+@inproceedings{long2018textsnake,
+  title={Textsnake: A flexible representation for detecting text of arbitrary shapes},
+  author={Long, Shangbang and Ruan, Jiaqiang and Zhang, Wenjie and He, Xin and Wu, Wenhao and Yao, Cong},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  pages={20--36},
+  year={2018}
+}
+```
+
+We release the **Rectified Total-Text** (RectTotal) dataset for further research. 
+
+## Citation
+If our paper and code help you in your research and understand the text recognition better, you are highly encouraged (though not required) to cite our paper (BibText to be updated after announcement). 
+
+## Aknowledgement

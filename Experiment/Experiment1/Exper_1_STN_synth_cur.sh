@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+python3 examples/main.py \
+  --logs_dir ./logs/1_STN_synth_cur \
+  --train_dataset synthtextlist --train_data_dir "./dataset/curvedsynth"
