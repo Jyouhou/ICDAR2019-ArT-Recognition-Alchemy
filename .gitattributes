@@ -1,0 +1,4 @@
+./Source/datasets/lexicon/*full linguist-language=Python
+./Source/datasets/lexicon/*50 linguist-language=Python
+./Source/datasets/lexicon/*1k linguist-language=Python
+./Source/datasets/lexicon/*list linguist-language=Python
