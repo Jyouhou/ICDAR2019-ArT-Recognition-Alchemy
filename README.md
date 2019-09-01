@@ -4,7 +4,7 @@
 
 This is the code repository for our algorithm that **ranked No.1** on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). Our team name is PKU Team Zero. 
 
-We have submitted a detailed technical report to Arxiv that should be announced at Mon, 2 Sep 2019 00:00:00 GMT. Code will be released by then. Get ready :) We hope our efforts will act as a stepping stone to better recognition algorithms.
+We have submitted a detailed technical report to Arxiv that should be announced at Mon, 2 Sep 2019 00:00:00 GMT. We hope our efforts will act as a stepping stone to better recognition algorithms.
 
 ![](imgs/pipeline.jpg)
 
