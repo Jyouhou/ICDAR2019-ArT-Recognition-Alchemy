@@ -6,7 +6,7 @@ This is the code repository for our algorithm that **ranked No.1** on [__ICDAR20
 
 We have submitted a detailed technical report to Arxiv that should be announced at Mon, 2 Sep 2019 00:00:00 GMT. Code will be released by then. Get ready :) We hope our efforts will act as a stepping stone to better recognition algorithms.
 
-![](imgs/pipeline.pdf)
+![](imgs/pipeline.jpg)
 
 ### Team
 - Shangbang Long (龙上邦), master student at CMU MLD.
@@ -115,7 +115,7 @@ You can download and put these one under the `dataset` folder to start trying ou
 
 ### Curved SynthText Engine
 
-![](imgs/curved.pdf)
+![](imgs/curved.jpg)
 
 As would be discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine: [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
 
