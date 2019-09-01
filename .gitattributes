@@ -1,2 +1,5 @@
 ./Source/datasets/lexicon/* linguist-language=Python
+./imgs/* linguist-language=Python
+LICENSE linguist-language=Python
+./Source/datasets/*pkl linguist-language=Python
 
