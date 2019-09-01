@@ -140,5 +140,3 @@ We release the **Rectified Total-Text** (RectTotal) dataset for further research
 
 ## Citation
 If our paper and code help you in your research and understand the text recognition better, you are highly encouraged (though not required) to cite our paper (BibText to be updated after announcement). 
-
-## Aknowledgement
