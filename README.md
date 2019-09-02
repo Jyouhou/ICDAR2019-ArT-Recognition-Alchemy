@@ -4,7 +4,7 @@
 
 This is the code repository for our algorithm that **ranked No.1** on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). Our team name is PKU Team Zero. 
 
-We have submitted a detailed technical report to Arxiv that should be announced at Mon, 2 Sep 2019 00:00:00 GMT. We hope our efforts will act as a stepping stone to better recognition algorithms.
+For more technical details, please refer to our paper: [Alchemy: Techniques for Rectification Based Irregular Scene Text Recognition ](https://arxiv.org/abs/1908.11834). We hope our efforts will act as a stepping stone to better recognition algorithms.
 
 ![](imgs/pipeline.jpg)
 
@@ -139,4 +139,13 @@ We propose to evaluate algorithms on images rectified by TextSnake, as an invest
 We release the **Rectified Total-Text** (RectTotal) dataset for further research. 
 
 ## Citation
-If our paper and code help you in your research and understand the text recognition better, you are highly encouraged (though not required) to cite our paper (BibText to be updated after announcement). 
+If our paper and code help you in your research and understand the text recognition better, you are highly encouraged (though not required) to cite our paper:
+
+```
+@article{long2019ArT,
+  title={Alchemy: Techniques for Rectification Based Irregular Scene Text Recognition},
+  author={Long, Shangbang and Guan, Yushuo and Wang, Bingxuan and Bian, Kaigui and Yao, Cong},
+  journal={arXiv preprint arXiv:1908.11834 },
+  year={2019}
+}
+```
