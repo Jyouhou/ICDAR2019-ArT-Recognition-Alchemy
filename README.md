@@ -37,9 +37,9 @@ Find the enclosed environment file, and use the following command to install:
 You will need Anaconda to do so. 
 
 ### Data
-In this section, we introduce how to prepare data for experiments. For our datasets, please refer to the `Pretrained Models and Data` section below.
+In this section, we introduce how to prepare data for experiments. For download datasets and pretrained models, please refer to the `Pretrained Models and Data` section below.
 
-All datasets should be placed under the `dataset` folder. The datasets should be arranged as follows:
+All datasets should be placed under the `./dataset` folder. The data should be arranged as follows:
 
 #### - File Tree
 
@@ -97,18 +97,28 @@ To replicate our ICDAR 2019 models, readers can use scripts in `Experiment/Exper
 
 ## Pretrained Models and Data
 
-### Models
-We will release some pretrained models shortly.
+### Pretrained Models
+We select and release 3 representative models. You download from the link, unzip the file, and put the model files (ends with `pth.tar`).
+
+| Models | Link |
+|------------|----------|
+| <ul><li>*Rect* trained with *CurvedSynth* + *Synth90K*</li><li>*Rect* trained with *CurvedSynth* + *Synth90K* plus 15% real world data</li><li>*Rect* with squarization and random rotation, trained on synthetic data</li></ul> | [Link](https://shangbangblog.files.wordpress.com/2019/09/ic19_models.zip) |
+
+The use of pretrained models is demonstrated in the following scripts:
+
+- `./Experiment/Experiment1/Exper_1_STN_all_synth_test.sh`
+- `./Experiment/Experiment2/Exper_2_STN_real_15_test.sh`
+- `./Experiment/Experiment4/Exper_4_Square_flip_test.sh`
 
 ### Data
-We will release all datasets we used for the convenience of the research community. 
+We will release all datasets we used, for the convenience of the research community. 
 
 However, as they are large, we only release the following ones for now. We will update soon. 
 
 | Dataset name | Description | Link |
 |:----:|:----:|:----:|
 | *RectTotal* | Total-Text rectified by TextSnake | [Google Drive](https://drive.google.com/open?id=1PYMAJA6zAvmjMpiPO5FXMmaj-vPVjQkC) | 
-| *CurvedSynth*(20K) | The newly proposed synthetic dataset we used | [Google Drive](https://drive.google.com/open?id=1J3Wd_KYIZdsX262ybuSJL_gWrCQoeel9) |
+| *CurvedSynth*(now full) | The newly proposed synthetic dataset we used | [Google Drive](https://drive.google.com/open?id=1FSo-aaL8TbnRa3ChCMvMgHMp2DECB_1i) |
 
 You can download and put these one under the `dataset` folder to start trying our code.
 
@@ -119,7 +129,7 @@ You can download and put these one under the `dataset` folder to start trying ou
 
 As would be discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine: [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
 
-Using synthetic images from this engine, we can expect $10+\%$ improvement on Total-Text using a very simple algorithm. 
+Using synthetic images from this engine, we can expect 10+\% improvement on Total-Text using a very simple algorithm. 
 
 ### RectTotal
 ![](imgs/RectTot.jpeg)

@@ -14,7 +14,7 @@ import sys
 
 from . import evaluation_metrics
 from .utils.meters import AverageMeter
-from .utils.visualization_utils import VisTPS
+from .utils.visualization_utils import VisTPS, VisIMG
 
 metrics_factory = evaluation_metrics.factory()
 
@@ -124,13 +124,20 @@ class BaseEvaluator(object):
         else:
             eval_res = None
         # ====== Visualization ====== #
-        # only for rectification baselines
-        if 'ctrl_points' in outputs and vis_dir is not None and os.path.isdir(vis_dir):
-            images, rectified_imgs = VisTPS(images, outputs['ctrl_points'])
-            for i in range(rectified_imgs.shape[0]):
-                cv2.imwrite(os.path.join(vis_dir, f"{i}-{str(pred_list[i])}.jpg"),
-                            np.concatenate([images[i],
-                                            rectified_imgs[i][::2, ::2, :]], axis = 0))
+        if vis_dir is not None and os.path.isdir(vis_dir):
+            if 'ctrl_points' in outputs:
+                # for rectification baselines
+                images, rectified_imgs = VisTPS(images, outputs['ctrl_points'])
+                for i in range(rectified_imgs.shape[0]):
+                    cv2.imwrite(os.path.join(vis_dir, f"{i}-{str(pred_list[i])}.jpg"),
+                                np.concatenate([images[i],
+                                                rectified_imgs[i][::2, ::2, :]], axis = 0))
+            else:
+                images = VisIMG(images)
+                for i in range(len(images)):
+                    cv2.imwrite(os.path.join(vis_dir, f"{i}-{str(pred_list[i])}.jpg"),
+                                images[i])
+
 
         self.model.train()
         return eval_res

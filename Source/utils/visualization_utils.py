@@ -32,3 +32,13 @@ def VisTPS(
 
     return images, tps_images
 
+def VisIMG(
+        images
+        ):
+
+    images = images.permute(0, 2, 3, 1)
+    images = to_numpy(images)
+    images = images * 128.0 + 128.0
+
+    return images
+

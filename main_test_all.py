@@ -11,6 +11,7 @@ common_cmds += '--tps_margins 0.01 0.01 '
 parser = argparse.ArgumentParser(
     description='the script to test all datasets.')
 parser.add_argument('--logs_dir', type=str, metavar="PATH", default='')
+parser.add_argument('--resume', type=str, default='')
 parser.add_argument('--is_stn', action='store_true', default=False)
 parser.add_argument('--CRNN', action='store_true', default=False)
 parser.add_argument('--tps_margins', nargs='+', type=float, default=[0, 0])
@@ -38,8 +39,12 @@ if args.ToGrey:
 if args.logs_dir == '':
     raise ValueError('logs_dir cant empty.')
 else:
-    common_cmds += '--logs_dir {0} --resume {1} '.format(
-        args.logs_dir+"_test", os.path.join(args.logs_dir, 'model_best.pth.tar'))
+    if os.path.isfile(args.resume):
+        common_cmds += '--logs_dir {0} --resume {1} '.format(
+            args.logs_dir + "_test", args.resume)
+    else:
+        common_cmds += '--logs_dir {0} --resume {1} '.format(
+            args.logs_dir+"_test", os.path.join(args.logs_dir, 'model_best.pth.tar'))
 
 if args.evaluate_with_lexicon:
     common_cmds += '--evaluate_with_lexicon '
