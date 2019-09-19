@@ -9,10 +9,10 @@ For more technical details, please refer to our paper: [Alchemy: Techniques for 
 ![](imgs/pipeline.jpg)
 
 ### Team
-- Shangbang Long (龙上邦), master student at CMU MLD.
-- Yushuo Guan (关玉烁), master student at Peking University, EECS.
-- Bingxuan Wang (王炳宣), junior undergraduate student at Peking University, Yuanpei College.
-- Kaigui Bian (边凯归), associate professor at Peking University, EECS.
+- Shangbang Long (龙上邦), master student at MLD CMU.
+- Yushuo Guan (关玉烁), master student at EECS, Peking University.
+- Bingxuan Wang (王炳宣), junior undergraduate student at Yuanpei College, Peking University.
+- Kaigui Bian (边凯归), associate professor at EECS, Peking University.
 - Cong Yao (姚聪), algorithm team leader at MEGVII (Face++) Inc.
 
 
@@ -75,12 +75,12 @@ The attributes are:
 - `str`: text content of the image
 - `poly_x`: x coordinates of the bounding polygon, if exists.
 - `poly_y`: y coordinates of the bounding polygon, if exists.
-- `chars`: a 3-D  2x4xN array (list) representing bounding boxes of N characters. The 3 dimensions are: x/y coordinates, 4 corners, N characters.
+- `chars`: a 3-D  2x4xN array (list) representing bounding boxes of N characters. The 3 dimensions are: x/y coordinates, 4 corners, N characters, if exists.
 
 
 
 ### How to Replicate the Experiments Presented in Our Paper:
-After the paper is announce, you can refer to the paper for more details. To run experiments, find the training scripts under the corresponding folders, and **call from the root folder**, e.g. `bash Experiment/Experiment1/Exper_1_CRNN_all_synth.sh`.
+You can refer to the paper for more details. To run experiments, find the training scripts under the corresponding folders, and **call from the root folder**, e.g. `bash Experiment/Experiment1/Exper_1_CRNN_all_synth.sh`.
 
 #### Exp 1: 
 Experiments W.R.T. new synthetic datasets as described in Section 3.1.2-3.1.3 can be found in `Experiment/Experiment1`. 
@@ -98,7 +98,7 @@ To replicate our ICDAR 2019 models, readers can use scripts in `Experiment/Exper
 ## Pretrained Models and Data
 
 ### Pretrained Models
-We select and release 3 representative models. You download from the link, unzip the file, and put the model files (ends with `pth.tar`).
+We select and release 3 representative models. Download from the link, unzip the file, and put the model files (ends with `pth.tar`) under th `pretrained_models` folder.
 
 | Models | Link |
 |------------|----------|
@@ -127,7 +127,7 @@ You can download and put these one under the `dataset` folder to start trying ou
 
 ![](imgs/curved.jpg)
 
-As would be discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine: [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
+As is discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine at [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
 
 Using synthetic images from this engine, we can expect 10+\% improvement on Total-Text using a very simple algorithm. 
 
