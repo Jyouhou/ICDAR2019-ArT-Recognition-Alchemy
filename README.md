@@ -4,7 +4,7 @@
 
 This is the code repository for our algorithm that **ranked No.1** on [__ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text__](https://rrc.cvc.uab.es/?ch=14&com=introduction) (Latin scripts). Our team name is PKU Team Zero. 
 
-For more technical details, please refer to our paper: [Alchemy: Techniques for Rectification Based Irregular Scene Text Recognition ](https://arxiv.org/abs/1908.11834). We hope our efforts will act as a stepping stone to better recognition algorithms.
+For more technical details, please refer to our paper: [Rethinking Irregular Scene Text Recognition](https://arxiv.org/abs/1908.11834). We hope our efforts will act as a stepping stone to better recognition algorithms.
 
 ![](imgs/pipeline.jpg)
 
