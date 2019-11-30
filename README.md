@@ -127,7 +127,7 @@ You can download and put these one under the `dataset` folder to start trying ou
 
 ![](imgs/curved.jpg)
 
-As is discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine at [Jyouhou/CurvedSynthText](https://github.com/Jyouhou/CurvedSynthText).
+As is discussed in detail in the paper, the **Curved SynthText Engine** we modified from the original SynthText is our trump card. We also opensource this engine at [this repo](https://github.com/PkuDavidGuan/CurvedSynthText).
 
 Using synthetic images from this engine, we can expect 10+\% improvement on Total-Text using a very simple algorithm. 
 
