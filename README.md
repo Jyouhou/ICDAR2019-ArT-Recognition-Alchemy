@@ -102,7 +102,7 @@ We select and release 3 representative models. Download from the link, unzip the
 
 | Models | Link |
 |------------|----------|
-| <ul><li>*Rect* trained with *CurvedSynth* + *Synth90K*</li><li>*Rect* trained with *CurvedSynth* + *Synth90K* plus 15% real world data</li><li>*Rect* with squarization and random rotation, trained on synthetic data</li></ul> | [Link](https://shangbangblog.files.wordpress.com/2019/09/ic19_models.zip) |
+| <ul><li>*Rect* trained with *CurvedSynth* + *Synth90K*</li><li>*Rect* trained with *CurvedSynth* + *Synth90K* plus 15% real world data</li><li>*Rect* with squarization and random rotation, trained on synthetic data</li></ul> | [Google Drive](https://drive.google.com/file/d/1FqwAzeqZcegcskpjr3ZmeA9X-oQxPLmK/view?usp=sharing) |
 
 The use of pretrained models is demonstrated in the following scripts:
 
