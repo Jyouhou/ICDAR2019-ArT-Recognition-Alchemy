@@ -115,10 +115,10 @@ We will release all datasets we used, for the convenience of the research commun
 
 However, as they are large, we only release the following ones for now. We will update soon. 
 
-| Dataset name | Description | Link |
-|:----:|:----:|:----:|
-| *RectTotal* | Total-Text rectified by TextSnake | [Google Drive](https://drive.google.com/open?id=1PYMAJA6zAvmjMpiPO5FXMmaj-vPVjQkC) | 
-| *CurvedSynth*(now full) | The newly proposed synthetic dataset we used | [Baidu Drive](https://pan.baidu.com/s/1YYH9g1TvdbNvquj-7-u3tg)  password:9fp2 |
+| Dataset name | Description | Baidu Pan | Google Drive |
+|:----:|:----:|:----:|:----:|
+| *RectTotal* | Total-Text rectified by TextSnake | N/A | [Google Drive](https://drive.google.com/open?id=1PYMAJA6zAvmjMpiPO5FXMmaj-vPVjQkC) | 
+| *CurvedSynth*(now full) | The newly proposed synthetic dataset we used | [Baidu Drive](https://pan.baidu.com/s/1YYH9g1TvdbNvquj-7-u3tg)  password:9fp2 | [Part1](https://drive.google.com/drive/folders/1RfOOLDT4CtiXfD-FZxNVnIzcreKOazkZ?usp=sharing) [Part2](https://drive.google.com/drive/folders/1pei4ExuDL7mgRwMar4_-IFVQQPhAGDH5?usp=sharing) [Part3](https://drive.google.com/drive/folders/14VQR-Pfqrvch1HXWNSTRK2Si58KMVySr?usp=sharing) |
 
 You can download and put these one under the `dataset` folder to start trying our code.
 
