@@ -153,7 +153,7 @@ If our paper and code help you in your research and understand the text recognit
 
 ```
 @article{long2019ArT,
-  title={Alchemy: Techniques for Rectification Based Irregular Scene Text Recognition},
+  title={Rethinking Irregular Scene Text Recognition},
   author={Long, Shangbang and Guan, Yushuo and Wang, Bingxuan and Bian, Kaigui and Yao, Cong},
   journal={arXiv preprint arXiv:1908.11834},
   year={2019}
